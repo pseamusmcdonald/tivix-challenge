@@ -82,6 +82,10 @@ footer {
 	gap: 1rem;
 }
 
+.navLink {
+	text-decoration: none;
+}
+
 .headerNav.mobile {
 	display: none;
 }
@@ -91,6 +95,12 @@ footer {
 	height: calc(100vh - 131px);
 	align-items: center;
 	justify-content: center;
+	width: 80%;
+	margin: auto;
+}
+
+.heroImageContainer {
+	width: 50%;
 }
 
 .contactPageContainer {
@@ -165,10 +175,41 @@ footer {
 	margin: 3rem auto;
 }
 
+.legalPageContainer > h1 {
+	text-align: center;
+}
+
 @media screen and (max-width: 768px) {
+	.mobileNavWrapper {
+		width: 100vw;
+        height: auto;
+        max-height: 100vh;
+        background: #b4b4b4;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+	}
+
+	.mobileNavExit {
+		display: flex;
+    	justify-content: flex-end;
+    	margin: 1rem 1rem 3rem 0;
+	}
+
 	.headerNav {
 		display: none;
 		visibility: hidden;
+	}
+
+	.navLink {
+		font-size: 2rem;
+		padding: 0;
+		margin-bottom: 1.5rem;
+    	display: block;
+    	color: #f9f9f9;
 	}
 	
 	.headerNav.mobile {
@@ -182,6 +223,10 @@ footer {
 		width: 90%;
 	}
 
+	.heroImageContainer {
+		width: 100%;
+	}
+
 	.contactPageContainer {
 		flex-direction: column;
 	}
@@ -192,6 +237,7 @@ footer {
 
 	.contactPageSectionWrapper.left > div {
 		width: 90%;
+		margin-bottom: 2rem;
 	}
 
 	#contactForm {
@@ -211,5 +257,9 @@ footer {
 
 	.legalPageContainer {
 		margin: 1rem auto;
+	}
+	
+	.legalPageContainer > h1 {
+		text-align: left;
 	}
 }

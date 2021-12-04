@@ -9,7 +9,7 @@ const PrivacyPolicy = ({data}) => {
 	return (
 		<Layout>
 			<div className='legalPageContainer'>
-				<h1 style={{textAlign: 'center'}}>{data.prismicPrivacyPolicyPage.data.page_title.text}</h1>
+				<h1>{data.prismicPrivacyPolicyPage.data.page_title.text}</h1>
 				<RichText html={data.prismicPrivacyPolicyPage.data.page_content.html} />
 			</div>
 		</Layout>

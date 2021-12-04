@@ -18,24 +18,26 @@ const Header = () => {
 					</svg>
 				</Link>
 				<div className='headerNav'>
-					<Link to='/'>home</Link>
-					<Link to='/contact'>contact</Link>
-					<Link to='/privacy-policy/'>privacy policy</Link>
+					<Link to='/' className='navLink'>home</Link>
+					<Link to='/contact' className='navLink'>contact</Link>
+					<Link to='/privacy-policy/' className='navLink'>privacy policy</Link>
 				</div>
 				<div className='headerNav mobile'>
 					<div id='menuHamburger' onClick={ handleMenuClick }>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill='#' /></svg>
 					</div>
 					{(isOpen) &&
-						<div className='mobileNavMenuContainer'>
-							<div className='mobileNavExit' onClick={ handleMenuClick } >
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="#"/></svg>
+						<div className='mobileNavWrapper'>
+							<div className='mobileNavMenuContainer'>
+								<div className='mobileNavExit' onClick={ handleMenuClick } >
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="#f9f9f9"/></svg>
+								</div>
+								<ul className="mobileNavMenu">
+									<div onClick={ handleMenuClick }><Link to="/" className='navLink'>home</Link></div>
+									<div onClick={ handleMenuClick }><Link to="/contact/" className='navLink'>contact</Link></div>
+									<div onClick={ handleMenuClick }><Link to="/privacy-policy/" className='navLink'>privacy policy</Link></div>
+								</ul>
 							</div>
-							<ul className="mobileNavMenu">
-								<div onClick={ handleMenuClick }><Link to="/" className='navLink'>home</Link></div>
-								<div onClick={ handleMenuClick }><Link to="/contact/" className='navLink'>contact</Link></div>
-								<div onClick={ handleMenuClick }><Link to="/privacy-policy/" className='navLink'>privacy policy</Link></div>
-							</ul>
 						</div>
 					}
 				</div>
