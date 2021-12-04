@@ -5,7 +5,6 @@ import Layout from '../layout'
 import RichText from '../components/rich-text'
 
 const PrivacyPolicy = ({data}) => {
-	console.log(data.prismicPrivacyPolicyPage)
 	return (
 		<Layout>
 			<div className='legalPageContainer'>
@@ -17,18 +16,18 @@ const PrivacyPolicy = ({data}) => {
 }
 
 export const query = graphql`
-  {
+{
     prismicPrivacyPolicyPage {
-      data {
-        page_title {
-		  text
-        }
-        page_content {
-          html
-        }
-      }
+      	data {
+        	page_title {
+		  		text
+        	}
+        	page_content {
+        	  	html
+        	}
+      	}
     }
-  }
+}
 `
 
 export default PrivacyPolicy

@@ -15,8 +15,7 @@ const Contact = ({data}) => {
 				<div className="contactPageSectionWrapper right">
 					<ContactForm />
 				</div>
-			</div>
-			
+			</div>	
 		</Layout>
 	)
 }
